@@ -8,6 +8,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 public class WebMvcConfiguration implements WebMvcConfigurer {
+    //注册拦截器
     @Autowired
     private JwtTokenAdminInterceptor jwtTokenAdminInterceptor;
     @Override
