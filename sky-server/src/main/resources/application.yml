@@ -13,9 +13,11 @@ spring:
       username: ${sky.datasource.username}
       password: ${sky.datasource.password}
 mybatis:
+  #mapper配置文件
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     map-underscore-to-camel-case: true
+  mapper-locations: classpath:mapper/*.xml
 sky:
   jwt:
     # 设置jwt签名加密时使用的秘钥
