@@ -3,10 +3,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>4.1.1</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <groupId>com.sky</groupId>
+        <artifactId>sky-take-out</artifactId>
+        <version>1.0-SNAPSHOT</version>
     </parent>
     <groupId>com.sky</groupId>
     <artifactId>sky-server</artifactId>
@@ -36,6 +35,10 @@
         </dependency>
 
         <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-4-starter</artifactId>
+        </dependency>
+        <dependency>
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
             <scope>runtime</scope>
@@ -51,17 +54,30 @@
             <scope>test</scope>
         </dependency>
 
-<!--        引入实体类和工具类-->
+<!--        引入实体类和工具类依赖-->
+        <dependency>
+            <groupId>com.sky</groupId>
+            <artifactId>sky-common</artifactId>
+        </dependency>
         <dependency>
             <groupId>com.sky</groupId>
             <artifactId>sky-pojo</artifactId>
         </dependency>
-
+<!--        引入Mybatis依赖-->
         <dependency>
-            <groupId>com.sky</groupId>
-            <artifactId>sky-commom</artifactId>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
-
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+        </dependency>
+<!--        引入pageHelper依赖-->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
+        </dependency>
 
     </dependencies>
 
