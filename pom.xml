@@ -33,6 +33,10 @@
         <jaxb.runtime.version>2.3.3</jaxb.runtime.version>
         <jjwt.version>0.9.1</jjwt.version>
         <druid.version>1.2.28</druid.version>
+        <fastjson.version>1.2.83</fastjson.version>
+        <wechatpay.apache.httpclient.version>0.4.8</wechatpay.apache.httpclient.version>
+        <commons.lang.version>2.6</commons.lang.version>
+        <httpclient.version>4.5.14</httpclient.version>
     </properties>
 
     <modules>
@@ -123,6 +127,29 @@
 
 
 
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.wechatpay-apiv3</groupId>
+                <artifactId>wechatpay-apache-httpclient</artifactId>
+                <version>${wechatpay.apache.httpclient.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-lang</groupId>
+                <artifactId>commons-lang</artifactId>
+                <version>${commons.lang.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${httpclient.version}</version>
+            </dependency>
             <!--JWT依赖-->
             <dependency>
                 <groupId>io.jsonwebtoken</groupId>
