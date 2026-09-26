@@ -3,7 +3,7 @@ sky:
     driver-class-name: com.mysql.cj.jdbc.Driver
     host: localhost
     port: 3306
-    database: sky_take_out
+    database:
     username:
     password:
   alioss:
@@ -11,3 +11,8 @@ sky:
     access-key-id:
     access-key-secret:
     bucket-name:
+  redis:
+    host:
+    port:
+    password:
+    database:

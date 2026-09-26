@@ -80,4 +80,30 @@ public class DishController {
         dishService.updateWithFlavor(dishDTO);
         return Result.success();
     }
+
+    /**
+     * 根据分类id查询菜品
+     * @param categoryId
+     * @return
+     */
+    @GetMapping("/list")
+    public Result<List<Dish>> getByCategoryId(Long categoryId){
+       log.info("根据分类id查询菜品:{}",categoryId);
+       List<Dish> dishes=dishService.getByCategoryId(categoryId);
+       return Result.success(dishes);
+    }
+
+    /**
+     * 设置菜品状态
+     * @param status
+     * @param id
+     * @return
+     */
+    @PostMapping("/status/{status}")
+    public Result setStatus(@PathVariable Integer status,Long id){
+        log.info("设置菜品状态:{},{}",id,status==1?"起售":"停售");
+        dishService.setStatus(status,id);
+        return Result.success();
+    }
+
 }
