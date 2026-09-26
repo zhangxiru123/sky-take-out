@@ -28,6 +28,8 @@ import java.util.List;
 public class EmployeeServiceImpl implements EmployeeService {
     @Autowired
     private EmployeeMapper employeeMapper;
+
+    //1.用户登录
     @Override
     public Employee login(EmployeeLoginDTO employeeLoginDTO) {
         String username=employeeLoginDTO.getUsername();
@@ -55,7 +57,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         return employee;
     }
 
-    //新增员工
+    //2.新增员工
     @Override
     public void save(EmployeeDTO employeeDTO) {
         Employee employee=new Employee();
@@ -68,18 +70,11 @@ public class EmployeeServiceImpl implements EmployeeService {
         //设置密码,默认123456
         employee.setPassword(DigestUtils.md5DigestAsHex(PasswordConstant.DEFAULT_PASSWORD.getBytes()));
 
-        //设置当前记录的创建时间和修改时间
-        employee.setCreateTime(LocalDateTime.now());
-        employee.setUpdateTime(LocalDateTime.now());
-
-        //设置当前记录创建人和修改人的id
-        employee.setCreateUser(BaseContext.getCurrentId());
-        employee.setUpdateUser(BaseContext.getCurrentId());
 
         employeeMapper.insert(employee);
     }
 
-    //员工分页查询
+    //3.员工分页查询
     @Override
     public PageResult pageQuery(EmployeePageQueryDTO employeePageQueryDTO) {
         //开始分页查询
@@ -92,7 +87,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         return new PageResult(total,records);
     }
 
-    //启用禁用员工账号
+    //4.启用禁用员工账号
     @Override
     public void startOrStop(Integer status, Long id) {
         Employee employee = Employee.builder()
@@ -103,7 +98,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         employeeMapper.update(employee);
     }
 
-    //根据id查询员工信息
+    //5.根据id查询员工信息
     @Override
     public Employee getById(Long id) {
         Employee employee=employeeMapper.getById(id);
@@ -111,7 +106,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         return employee;
     }
 
-    //修改员工信息
+    //6.修改员工信息
     @Override
     public void update(EmployeeDTO employeeDTO) {
         Employee employee=new Employee();

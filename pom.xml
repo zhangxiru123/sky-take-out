@@ -37,6 +37,8 @@
         <wechatpay.apache.httpclient.version>0.4.8</wechatpay.apache.httpclient.version>
         <commons.lang.version>2.6</commons.lang.version>
         <httpclient.version>4.5.14</httpclient.version>
+        <spring.aop.version>7.0.9</spring.aop.version>
+        <aspectjweaver.version>1.9.25.1</aspectjweaver.version>
     </properties>
 
     <modules>
@@ -99,6 +101,18 @@
                 <groupId>com.github.pagehelper</groupId>
                 <artifactId>pagehelper-spring-boot-starter</artifactId>
                 <version>${pagehelper.spring.boot.starter.version}</version>
+            </dependency>
+
+            <!--aop依赖-->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aop</artifactId>
+                <version>${spring.aop.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjweaver</artifactId>
+                <version>${aspectjweaver.version}</version>
             </dependency>
 
             <!--aliyun依赖-->

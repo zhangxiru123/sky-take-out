@@ -8,6 +8,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import java.io.ByteArrayInputStream;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.UUID;
 
 @Data
 @AllArgsConstructor
@@ -26,7 +29,15 @@ public class AliOssUtil {
      * @param objectName
      * @return
      */
-    public String upload(byte[] bytes, String objectName) {
+    public String upload(byte[] bytes, String originalFilename) {
+
+        //建立文件夹名称,示例为xxxx年x月
+        String dir = LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy/MM"));
+        //截取原始文件名后缀
+        String extension = originalFilename.substring(originalFilename.lastIndexOf("."));
+        //构造新文件的名称
+        String newFileName = UUID.randomUUID().toString() + extension;
+        String objectName =dir+"/"+newFileName;
 
         // 创建OSSClient实例。
         OSS ossClient = new OSSClientBuilder().build(endpoint, accessKeyId, accessKeySecret);
