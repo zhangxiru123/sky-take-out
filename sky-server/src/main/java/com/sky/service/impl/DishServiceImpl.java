@@ -20,11 +20,13 @@ import com.sky.vo.DishVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 /**
  * 菜品的业务层
@@ -41,6 +43,8 @@ public class DishServiceImpl implements DishService {
     private SetmealDishMapper setmealDishMapper;
     @Autowired
     private SetmealMapper setmealMapper;
+    @Autowired
+    private RedisTemplate redisTemplate;
 
     /**
      * 新增菜品和对应口味
@@ -65,6 +69,10 @@ public class DishServiceImpl implements DishService {
             });
             dishFlavorMapper.insertBatch(flavors);
         }
+
+        //清除redis缓存
+        String key="dish_"+dish.getCategoryId();
+        redisTemplate.delete(key);
     }
 
     /**
@@ -101,6 +109,9 @@ public class DishServiceImpl implements DishService {
         dishMapper.deleteByIds(ids);
         //删除口味数据
         dishFlavorMapper.deleteByIds(ids);
+        //删除redis缓存
+        cleanCache();
+
     }
     /**
      * 根据id来查询菜品和口味
@@ -143,6 +154,8 @@ public class DishServiceImpl implements DishService {
             });
             dishFlavorMapper.insertBatch(flavors);
         }
+        //删除redis缓存
+        cleanCache();
     }
 
     /**
@@ -187,6 +200,13 @@ public class DishServiceImpl implements DishService {
                 }
             }
         }
+        //删除redis缓存
+        cleanCache();
+    }
+
+    private void cleanCache() {
+        Set keys = redisTemplate.keys("dish_*");
+        redisTemplate.delete(keys);
     }
 
 
