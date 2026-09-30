@@ -3,13 +3,15 @@ package com.sky.result;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * 统一返回结果
  @param <T>
 */
 
 @Data
-public class Result<T> {
+public class Result<T> implements Serializable {
     private Integer code;
     private String msg;
     private T data;
