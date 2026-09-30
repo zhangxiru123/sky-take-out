@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40b17a06-43e1-4857-b178-a9853d517709" name="更改" comment="缓存菜品的代码开发">
-      <change afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/user/ShoppingCartController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/mapper/ShoppingCartMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/ShoppingCartService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/impl/ShoppingCartServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sky-server/src/main/resources/mapper/ShoppingCartMapper.xml" afterDir="false" />
+    <list default="true" id="40b17a06-43e1-4857-b178-a9853d517709" name="更改" comment="添加购物车业务代码开发">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-common/src/main/java/com/sky/result/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-common/src/main/java/com/sky/result/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/SkyServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/SkyServerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/admin/SetmealController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/admin/SetmealController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/user/SetmealController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/user/SetmealController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/user/ShopController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/user/ShopController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/user/ShoppingCartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/user/ShoppingCartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/ShoppingCartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/ShoppingCartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/impl/ShoppingCartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/impl/ShoppingCartServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sky-server/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/resources/application-dev.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sky-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/resources/application.yml" afterDir="false" />
     </list>
@@ -197,7 +191,7 @@
       <workItem from="1790520107783" duration="659000" />
       <workItem from="1790581705146" duration="5049000" />
       <workItem from="1790666225416" duration="9293000" />
-      <workItem from="1790750486948" duration="2690000" />
+      <workItem from="1790750486948" duration="3631000" />
     </task>
     <task id="LOCAL-00001" summary="整理项目结构">
       <option name="closed" value="true" />
@@ -295,7 +289,15 @@
       <option name="project" value="LOCAL" />
       <updated>1790670479432</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="添加购物车业务代码开发">
+      <option name="closed" value="true" />
+      <created>1790753238237</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1790753238237</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,6 +328,7 @@
     <MESSAGE value="更新小程序用户端的菜品查询 分类查询以及套餐查询的代码" />
     <MESSAGE value="小程序端的controller" />
     <MESSAGE value="缓存菜品的代码开发" />
-    <option name="LAST_COMMIT_MESSAGE" value="缓存菜品的代码开发" />
+    <MESSAGE value="添加购物车业务代码开发" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加购物车业务代码开发" />
   </component>
 </project>

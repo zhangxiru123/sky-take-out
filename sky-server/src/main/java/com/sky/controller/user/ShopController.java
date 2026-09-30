@@ -1,10 +1,13 @@
 package com.sky.controller.user;
 
+import com.sky.entity.ShoppingCart;
 import com.sky.result.Result;
 import com.sky.service.ShopService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * 店铺的controller
@@ -26,4 +29,6 @@ public class ShopController {
         log.info("获取店铺的营业状态为:{}",status==1?"营业中":"打烊中");
         return Result.success(status);
     }
+
+
 }
