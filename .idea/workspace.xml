@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40b17a06-43e1-4857-b178-a9853d517709" name="更改" comment="添加购物车业务代码开发">
+    <list default="true" id="40b17a06-43e1-4857-b178-a9853d517709" name="更改" comment="查看购物车业务代码开发">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/user/ShopController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/user/ShopController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/user/ShoppingCartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/user/ShoppingCartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/mapper/ShoppingCartMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/mapper/ShoppingCartMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/ShoppingCartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/ShoppingCartService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/impl/ShoppingCartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/impl/ShoppingCartServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sky-server/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/resources/application-dev.yml" afterDir="false" />
@@ -191,7 +191,9 @@
       <workItem from="1790520107783" duration="659000" />
       <workItem from="1790581705146" duration="5049000" />
       <workItem from="1790666225416" duration="9293000" />
-      <workItem from="1790750486948" duration="3631000" />
+      <workItem from="1790750486948" duration="4823000" />
+      <workItem from="1790757113119" duration="1481000" />
+      <workItem from="1790855474949" duration="311000" />
     </task>
     <task id="LOCAL-00001" summary="整理项目结构">
       <option name="closed" value="true" />
@@ -297,7 +299,15 @@
       <option name="project" value="LOCAL" />
       <updated>1790753238237</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="查看购物车业务代码开发">
+      <option name="closed" value="true" />
+      <created>1790754246700</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1790754246700</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,6 +339,7 @@
     <MESSAGE value="小程序端的controller" />
     <MESSAGE value="缓存菜品的代码开发" />
     <MESSAGE value="添加购物车业务代码开发" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加购物车业务代码开发" />
+    <MESSAGE value="查看购物车业务代码开发" />
+    <option name="LAST_COMMIT_MESSAGE" value="查看购物车业务代码开发" />
   </component>
 </project>
